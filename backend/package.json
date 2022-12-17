@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch ./data/sales.json --port 3001"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/john0x01/react-dashboard.git"
+  },
+  "author": "john0x01",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john0x01/react-dashboard/issues"
+  },
+  "homepage": "https://github.com/john0x01/react-dashboard#readme",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
+}
