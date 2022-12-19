@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import Navbar from './components/nav/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
+import Admin from './components/main/admin/Admin'
 
 import './App.css'
 
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <div className='container'>
       <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+      <Admin />
       <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
     </div>
   )
