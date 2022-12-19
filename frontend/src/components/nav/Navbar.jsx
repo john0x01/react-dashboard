@@ -17,11 +17,11 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
 
             <div className="navbar-right">
                 <a href="#">
-                    <FaSearch />
+                    <FaSearch id="faIcon"/>
                 </a>
 
                 <a href="#">
-                    <FaClock />
+                    <FaClock id="faIcon"/>
                 </a>
 
                 <a href="#">
