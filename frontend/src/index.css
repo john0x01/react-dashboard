@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+
+:root {
+    --grey: #a5aaad;
+    --blue: #2e4a66;
+    --light-blue: #469cac;
+    --yellow: #a98921;
+    --red: #cc3d38;
+    --green: #3b9668; 
+
+    --bg-green: #3ea175;
+}
+
+/* Estilização da scrollbars  */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--grey);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-green);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--grey);
+}
+  
+/* Estilizações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.text-primary-p {
+    color: var(--grey);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-title {
+    color: var(--blue);
+}
+
+.text-lightblue {
+    color: var(--light-blue);
+}
+
+.text-red {
+    color: var(--red);
+}
+
+.text-yellow {
+    color: var(--yellow);
+}
+
+.text-green {
+    color: var(--green)
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.8fr repeat(3, 1fr);
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas: 
+    'sidebar nav nav nav'
+    'sidebar main main main';
+}
+
+@media only screen and (max-width: 978px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas: "nav" "main";
+    }
+}
