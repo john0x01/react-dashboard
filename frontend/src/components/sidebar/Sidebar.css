@@ -101,7 +101,7 @@
         display: none;
     }
 
-    .sidebar-title > i {
+    .sidebar-title > .sidebar-icon {
         display: inline;
     }
 }

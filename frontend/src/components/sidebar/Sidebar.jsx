@@ -20,7 +20,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                 id='sidebarIcon'
                 aria-hidden="true"
                 >
-                    <FaTimes />
+                    <FaTimes className='sidebar-icon' />
                 </a>
             </div>
             <div className="sidebar-menu">
