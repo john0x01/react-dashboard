@@ -1,4 +1,4 @@
-const filterProducts = (productDb) => {
+const filterByName = (productDb) => {
     let productList = productDb
     let separatedProducts = []
     let nameList = []
@@ -28,4 +28,27 @@ const filterProducts = (productDb) => {
     return separatedProducts
 }
 
-module.exports = filterProducts
+const filterByDate = productDb => {
+    let productList = productDb
+    let separatedProducts = {}
+    let dateList = []
+
+    for(let index in productList) {
+        let productDate = productList[index].date.substring(0, 10)
+
+        if(dateList.includes(productDate)) {
+            separatedProducts[productDate].push(productList[index])
+        } else {
+            // console.log(productDate)
+            dateList.push(productDate)
+            separatedProducts[productDate] = []
+        }
+    }
+    for(let t in separatedProducts) {
+        separatedProducts[t] = filterByName(separatedProducts[t])
+    }
+    return separatedProducts
+}
+
+
+module.exports = { filterByName, filterByDate }
