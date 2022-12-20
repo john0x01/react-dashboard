@@ -1,7 +1,7 @@
 const axios = require('axios').default
 const baseApiUrl = 'http://localhost:3001'
 
-const { filterByName, filterByDate } = require('./data/filter')
+const getTotal = require('./data/total')
 
 async function axiosGet() {
     const response = await axios.get(`${baseApiUrl}/sales`)
@@ -10,8 +10,9 @@ async function axiosGet() {
 
 axiosGet()
     .then(response => {
+        console.log(getTotal(response))
         // console.log(filterByName(response))
-        console.log(filterByDate(response))
+        // console.log(filterByDate(response))
         // console.log(response[0].date.substring(0, 2))
     })
 
