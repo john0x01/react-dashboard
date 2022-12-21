@@ -1,4 +1,4 @@
-// import Chart from '../charts/Chart'
+import Chart from '../../charts/PieChart'
 
 import './Admin.css'
 
@@ -55,18 +55,24 @@ const Admin = () => {
                     <div className="charts-left">
                         <div className="charts-left-title">
                             <div>
-                                <h1>Daily Reports</h1>
-                                <p>Goiânia, Goiás, BR</p>
+                                <h1>Vendas Novembro 2022</h1>
+                                <div className="navbar-left">
+                                    <a href="#" className='active-link'>Mensal</a>
+                                    <a href="#">Últimos 7 dias</a>
+                                    <select name="days" id="days">
+                                        <option value="01/11/2022">01/11/2022</option>
+                                    </select>
+                                </div>
                             </div>
                             <BiDollar className='react-icon'/>
                         </div>
-                        {/* <Chart /> */}
+                        <Chart />
                     </div>
 
                     <div className="charts-right">
                         <div className="charts-right-title">
                             <div>
-                                <h1>Daily Reports</h1>
+                                <h1>Médias de vendas/</h1>
                                 <p>Goiânia, Goiás, BR</p>
                             </div>
                             <BiLineChart className='react-icon' />
