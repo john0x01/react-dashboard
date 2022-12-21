@@ -22,8 +22,10 @@ const filterByDate = (productDb, setDate=undefined) => {
     }
 
     for(let date in separatedProducts) {
-        separatedProducts[date]["totalQtde"] = getTotal(separatedProducts[date]).totalQtde
-        separatedProducts[date]["totalRevenue"] = getTotal(separatedProducts[date]).totalRevenue
+        separatedProducts[date].push({
+            "totalQtde": getTotal(separatedProducts[date]).totalQtde,
+            "totalRevenue": getTotal(separatedProducts[date]).totalRevenue
+        })
 
     }
 

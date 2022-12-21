@@ -14,7 +14,7 @@ axiosGet()
     .then(response => {
         // console.log(getTotal(filterByName(response)))
         // console.log(filterByName(response))
-        console.log(filterByDate(response, '01/11/2022'))
+        console.log(filterByDate(response))
         // console.log(response[0].date.substring(0, 2))
     })
 
