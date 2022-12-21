@@ -8,7 +8,7 @@ import { getTotal } from '../../data/total'
 
 const baseApiUrl = 'http://localhost:3001/sales'
 
-export default class Chart extends React.Component {
+export default class PieChart extends React.Component {
 
     state = {
         products: [],

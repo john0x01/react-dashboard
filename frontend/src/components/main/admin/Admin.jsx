@@ -1,9 +1,27 @@
-import Chart from '../../charts/PieChart'
+import PieChart from '../../charts/PieChart'
 
 import './Admin.css'
 
 import { BiFile, BiDollar, BiArchive, BiLineChart } from 'react-icons/bi'
 import { FaBars } from 'react-icons/fa'
+
+import React, { useState } from 'react'
+
+const ToggleTime = (period) => {
+    const [toggleMonth, setToggle] = useState(1)
+    const triggerToggle = () => {
+        setToggle(toggleMonth == 1 ? -1 : 1)
+    }
+
+
+    return (
+        <React.Fragment>
+            <a href='#' onClick={triggerToggle} className={toggleMonth == 1 ? 'active-link' : ''}>Mensal</a>
+            <a href='#' onClick={triggerToggle} className={toggleMonth == -1 ? 'active-link' : ''}>Últimos 7 dias</a>
+            {toggleMonth == 1 ? <PieChart /> : ''}
+        </React.Fragment>
+    )
+}
 
 const Admin = () => {
     return (
@@ -57,16 +75,10 @@ const Admin = () => {
                             <div>
                                 <h1>Vendas Novembro 2022</h1>
                                 <div className="navbar-left">
-                                    <a href="#" className='active-link'>Mensal</a>
-                                    <a href="#">Últimos 7 dias</a>
-                                    <select name="days" id="days">
-                                        <option value="01/11/2022">01/11/2022</option>
-                                    </select>
+                                    {ToggleTime()}
                                 </div>
                             </div>
-                            <BiDollar className='react-icon'/>
                         </div>
-                        <Chart />
                     </div>
 
                     <div className="charts-right">
