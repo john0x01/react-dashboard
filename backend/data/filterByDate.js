@@ -10,22 +10,25 @@ const filterByDate = (productDb, setDate=undefined) => {
         let productDate = productList[index].date.substring(0, 10)
 
         if(dateList.includes(productDate)) {
-            separatedProducts[productDate].push(productList[index])
+            separatedProducts[productDate]["sales"].push(productList[index])
+            // console.log(separatedProducts[productDate])
         } else {
             // console.log(productDate)
             dateList.push(productDate)
-            separatedProducts[productDate] = []
+            separatedProducts[productDate] = {}
+            separatedProducts[productDate]["sales"] = []
+            separatedProducts[productDate]["balance"] = {}
         }
     }
     for(let date in separatedProducts) {
-        separatedProducts[date] = filterByName(separatedProducts[date])
+        separatedProducts[date]["sales"] = filterByName(separatedProducts[date]["sales"])
     }
 
     for(let date in separatedProducts) {
-        separatedProducts[date].push({
-            "totalQtde": getTotal(separatedProducts[date]).totalQtde,
-            "totalRevenue": getTotal(separatedProducts[date]).totalRevenue
-        })
+        separatedProducts[date]["balance"] = {
+            "totalQtde": getTotal(separatedProducts[date]["sales"]).totalQtde,
+            "totalRevenue": getTotal(separatedProducts[date]["sales"]).totalRevenue
+        }
 
     }
 
@@ -34,6 +37,8 @@ const filterByDate = (productDb, setDate=undefined) => {
     } else {
         return separatedProducts
     }
+
+
 }
 
 module.exports = { filterByDate }
