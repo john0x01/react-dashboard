@@ -28,27 +28,18 @@ const filterByName = (productDb) => {
     return separatedProducts
 }
 
-const filterByDate = productDb => {
-    let productList = productDb
-    let separatedProducts = {}
-    let dateList = []
-
-    for(let index in productList) {
-        let productDate = productList[index].date.substring(0, 10)
-
-        if(dateList.includes(productDate)) {
-            separatedProducts[productDate].push(productList[index])
-        } else {
-            // console.log(productDate)
-            dateList.push(productDate)
-            separatedProducts[productDate] = []
-        }
-    }
-    for(let t in separatedProducts) {
-        separatedProducts[t] = filterByName(separatedProducts[t])
-    }
-    return separatedProducts
-}
 
 
-module.exports = { filterByName, filterByDate }
+
+module.exports = { filterByName }
+// Filter by date will return:
+// {
+//     "01/11/2022": [
+//         "...": "...",
+//         "...": "..."
+//     ],
+//     "02/11/2022": [
+//         "...": "...",
+//     ]
+//     ...
+// }
