@@ -18,11 +18,11 @@ async function axiosGet() {
 axiosGet().then(response => (filterByName(response)))
 axiosGet()
     .then(response => {
-        // console.log(filterByName(response))
+        console.log(filterByName(response))
         // console.log(getTotal(filterByName(response)))
         // const data = filterByDate(response, '30/11/2022')
         // console.log(data)
-        console.log(bestSeller(filterByName(response)))
+        // console.log(bestSeller(filterByName(response)))
         // console.log(getMean(filterByDate(response)))
         // console.log(filterByName(lastSeven(response)))
     })

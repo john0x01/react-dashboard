@@ -7,7 +7,7 @@ import { filterByName } from '../../data/filterByName'
 import { lastSeven } from '../../data/lastSeven'
 import { getTotal } from '../../data/total'
 
-const baseApiUrl = 'http://localhost:3001/sales'
+import { baseApiUrl } from '../../global'
 
 export default class PieChart extends React.Component {
 

@@ -6,7 +6,7 @@ import { VictoryBar, VictoryChart, VictoryAxis } from 'victory'
 import { filterByName } from '../../data/filterByName'
 import { lastSeven } from '../../data/lastSeven'
 
-const baseApiUrl = 'http://localhost:3001/sales'
+import { baseApiUrl } from '../../global'
 
 export default class BarsChart extends React.Component {
 

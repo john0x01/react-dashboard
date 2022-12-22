@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
+import Cards from './Cards'
 import PieChart from '../../charts/PieChart'
 import BarsChart from '../../charts/BarsChart'
-import { BiFile, BiDollar, BiArchive } from 'react-icons/bi'
-import { FaBars } from 'react-icons/fa'
 
+import greetings from '../../../assets/greetings.svg'
 import './Admin.css'
-
 
 const ToggleTime = () => {
     const [toggleMonth, setToggle] = useState(1)
@@ -48,46 +47,14 @@ const Admin = () => {
             <main>
                 <div className="main-container">
                     <div className="main-title">
-                        <img src="" alt="hello" />
+                        <img src={greetings} alt="hello" height={50} width={50} />
                         <div className="main-greeting">
                             <h1>Olá João</h1>
                             <p>Bem vindo ao seu painel</p>
                         </div>
                     </div>
-
-                    <div className="main-cards">
-                        <div className="card">
-                            <BiFile color='blue' size="2em"/>
-                            <div className="card-inner">
-                                <p className="text-primary-p">Número de pedidos</p>
-                                <span className="font-bold text-title">578</span>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <BiDollar color='red' size="2em"/>
-                            <div className="card-inner">
-                                <p className="text-primary-p">Faturamento</p>
-                                <span className="font-bold text-title">R$2.489</span>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <BiArchive color='yellow' size="2em"/>
-                            <div className="card-inner">
-                                <p className="text-primary-p">Produtos Vendidos</p>
-                                <span className="font-bold text-title">898</span>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <FaBars color='green' size="2em"/>
-                            <div className="card-inner">
-                                <p className="text-primary-p">Produtos Listados</p>
-                                <span className="font-bold text-title">5</span>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    <Cards />
 
                     <div className="charts">
                         <div className="charts-left">
@@ -112,19 +79,6 @@ const Admin = () => {
                             </div>
                             
                         
-                        </div>
-                        <div className="lower-cards">
-                            <div className="charts-right-cards">
-                                <div className="card1">
-                                    <h1>Calculadora</h1>
-                                    <p>Produto mais vendido</p>
-                                </div>
-
-                                <div className="card2">
-                                    <h1>+40%</h1>
-                                    <p>De vendas diárias</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
