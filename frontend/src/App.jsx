@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import Navbar from './components/nav/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
-import Admin from './components/main/admin/Admin'
+import Admin from './components/home/admin/Admin'
 
 import './App.css'
 

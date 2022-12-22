@@ -4,6 +4,7 @@ import axios from 'axios'
 import { VictoryPie, VictoryLabel } from 'victory'
 
 import { filterByName } from '../../data/filterByName'
+import { lastSeven } from '../../data/lastSeven'
 import { getTotal } from '../../data/total'
 
 const baseApiUrl = 'http://localhost:3001/sales'
@@ -17,7 +18,8 @@ export default class PieChart extends React.Component {
     componentDidMount() {
         axios.get(baseApiUrl)
             .then(response => {
-                const products = filterByName(response.data)
+                let products = (this.props.period === 'monthly') ?
+                    filterByName(response.data) : filterByName(lastSeven(response.data))
                 const total = getTotal(products)
 
                 this.setState({
@@ -25,11 +27,12 @@ export default class PieChart extends React.Component {
                     total: total
                 })
             })
-        
+
     }
 
     render() {
-        console.log(this.state.total.totalQtde)
+        console.log(this.state.total)
+
         return (
             <React.Fragment>
                 <VictoryPie 

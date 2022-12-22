@@ -20,6 +20,7 @@ const filterByName = (productDb) => {
             separatedProducts.push({
                 "name": productName,
                 "qtde": productQtde,
+                "price": productPrice,
                 "revenue": productPrice * productQtde
             })
         }

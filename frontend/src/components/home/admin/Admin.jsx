@@ -18,8 +18,8 @@ const ToggleTime = (period) => {
         <React.Fragment>
             <a href='#' onClick={triggerToggle} className={toggleMonth == 1 ? 'active-link' : ''}>Mensal</a>
             <a href='#' onClick={triggerToggle} className={toggleMonth == -1 ? 'active-link' : ''}>Últimos 7 dias</a>
-            {toggleMonth == 1 ? <PieChart /> : ''}
-            {toggleMonth == -1 ? <h1>Gráfico</h1> : ''}
+            {toggleMonth == 1 ? <PieChart period="monthly"/> : ''}
+            {toggleMonth == -1 ? <PieChart /> : ''}
         </React.Fragment>
     )
 }
