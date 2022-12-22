@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "test.js",
   "scripts": {
     "server": "json-server --watch data/db.json --port 3001",
-    "start": "nodemon index.js"
+    "test": "nodemon test.js"
   },
   "repository": {
     "type": "git",
