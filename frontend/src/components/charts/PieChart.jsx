@@ -31,7 +31,6 @@ export default class PieChart extends React.Component {
     }
 
     render() {
-        console.log(this.state.total)
 
         return (
             <React.Fragment>

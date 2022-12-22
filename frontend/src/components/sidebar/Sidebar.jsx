@@ -13,15 +13,8 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
             <div className="sidebar-title">
                 <div className="sidebar-img">
                     <img src="" alt="logo" />
-                    <h1>Painel de vendas</h1>
+                    <h1>React Dashboard</h1>
                 </div>
-
-                <a onClick={() => closeSidebar()}
-                id='sidebarIcon'
-                aria-hidden="true"
-                >
-                    <FaTimes className='sidebar-icon' />
-                </a>
             </div>
             <div className="sidebar-menu">
                 <div className="sidebar-link active-menu-link">
@@ -42,34 +35,18 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                     <a href="#">Produtos</a>
                 </div>
                 <div className="sidebar-link">
-                    <FaBars />
-                    <a href="#">Categorias</a>
-                </div>
-                <div className="sidebar-link">
                     <BiTachometer />
                     <a href="#">Pedidos</a>
                 </div>
 
                 <h2>Pessoas</h2>
                 <div className="sidebar-link">
-                    <FaMale />
-                    <a href="#">Administradores</a>
-                </div>
-                <div className="sidebar-link">
                     <FaUserCircle />
-                    <a href="#">Usuários</a>
+                    <a href="#">Funcionários</a>
                 </div>
                 <div className="sidebar-link">
                     <FaMale />
                     <a href="#">Pagamentos e custos</a>
-                </div>
-                <div className="sidebar-link">
-                    <FaMale />
-                    <a href="#">A plataforma</a>
-                </div>
-                <div className="sidebar-link">
-                    <FaMale />
-                    <a href="#">Política de privacidade</a>
                 </div>
                 <div className="sidebar-logout">
                     <FaPowerOff />

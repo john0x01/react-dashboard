@@ -11,19 +11,11 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
 
             <div className="navbar-left">
                 <a href="#">Produtos</a>
-                <a href="#">Usuários</a>
-                <a href="#" className="active-link">Admin</a>
+                <a href="#">Funcionários</a>
+                <a href="#" className="active-link">Painel</a>
             </div>
 
             <div className="navbar-right">
-                <a href="#">
-                    <FaSearch id="faIcon"/>
-                </a>
-
-                <a href="#">
-                    <FaClock id="faIcon"/>
-                </a>
-
                 <a href="#">
                     <img width="30" src="" alt="avatar" />
                 </a>
