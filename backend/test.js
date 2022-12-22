@@ -6,7 +6,7 @@ const { filterByDate } = require('./data/filterByDate')
 const { filterByName } = require('./data/filterByName')
 const { bestSeller, getMean } = require('./data/ranking')
 const { lastSeven } = require('./data/lastSeven')
-
+const { dailys } = require('./data/dailys')
 
 
 
@@ -15,16 +15,20 @@ async function axiosGet() {
     return response.data
 }
 
-axiosGet().then(response => (filterByName(response)))
+
 axiosGet()
     .then(response => {
-        console.log(filterByName(response))
-        // console.log(getTotal(filterByName(response)))
-        // const data = filterByDate(response, '30/11/2022')
+        // console.log(response)
+        // console.log(filterByName(response))
+        // console.log(getTotal(fi(response)))
+        // console.log(filterByDate(response, '2/11/2022'))
+        // const data = filterByDate(response, '10/11/2022')
         // console.log(data)
         // console.log(bestSeller(filterByName(response)))
         // console.log(getMean(filterByDate(response)))
         // console.log(filterByName(lastSeven(response)))
+        // console.log(getTotal(lastSeven(response)))
+        console.log(dailys(response, 30))
     })
 
 

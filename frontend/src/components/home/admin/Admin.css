@@ -80,34 +80,19 @@ main {
     box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #FFF;
 }
 
-.charts-left-title {
+.charts-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.charts-left-title > div > h1 {
+.charts-title > div > h1 {
     font-size: 25px;
     color: var(--dark-blue);
     margin-bottom: 5px;
 }
 
-.charts-left-title > div > p {
-    font-size: 25px;
-    font-weight: 700;
-    color: #a5aaad;
-}
 
-.charts-left-title .react-icon {
-    color: #FFF;
-    font-size: 20px;
-    background: #FFC100;
-    border-radius: 200px 0px 200px 200px;
-    -moz-border-radius: 200px 0px 200px 200px;
-    -webkit-border-radius: 200px 0px 200px 200px;
-    border: 0px solid #000;
-    padding: 15px;
-}
 
 .charts-right {
     padding: 25px;
@@ -116,32 +101,13 @@ main {
     box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #FFF;
 }
 
-.charts-right-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-
-.charts-right-title > div > h1 {
-    font-size: 25px;
-    color: var(--dark-blue);
-    margin-bottom: 5px;
-}
-
-.charts-right-title > div > p {
-    font-size: 25px;
-    font-weight: 700;
-    color: #a5aaad;
-}
-
-.charts-right-title .react-icon {
-    color: #FFF;
-    font-size: 20px;
-    background: #39447a;
-    border-radius: 200px 0px 200px 200px;
-    border: 0px solid #000;
-    padding: 15px;
+.charts-bottom {
+    padding: 25px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #FFF;
+    width: 200%;
 }
 
 

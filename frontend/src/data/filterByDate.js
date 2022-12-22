@@ -7,8 +7,7 @@ const filterByDate = (productDb, setDate=undefined) => {
     let dateList = []
 
     for(let index in productList) {
-        let productDate = productList[index].date.substring(0, 10)
-
+        let productDate = productList[index].date.substring(0, 10).trim()
         if(dateList.includes(productDate)) {
             separatedProducts[productDate]["sales"].push(productList[index])
             // console.log(separatedProducts[productDate])
